@@ -1,0 +1,13 @@
+## Purpose: ConfigMap for service discovery and non-sensitive config
+##
+## Notes:
+## - This stores non-sensitive values (plain text). Do not place credentials here.
+## - The webapp reads `DB_URL` from this ConfigMap to find the MongoDB service.
+## - Update values and re-apply with `kubectl apply -f config-mongo.yaml`.
+##
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  mongo-url: mongo-service
