@@ -1,6 +1,6 @@
 # Kubernetes Basics
 
-A short learning note with corrected Kubernetes concepts.
+A short learning note with Kubernetes concepts.
 
 ## What Kubernetes Does
 
