@@ -13,7 +13,7 @@ Kubernetes is a container orchestration platform. It helps with:
 ## Architecture
 
 Kubernetes has two main parts:
-- Master nodes: manages the cluster and makes decisions
+- Master nodes: manages the cluster and makes decisions (control plane)
 - Worker nodes: run the application workloads
 
 Each worker node runs a `kubelet`, which talks to the control plane and makes sure the desired pods are running.
