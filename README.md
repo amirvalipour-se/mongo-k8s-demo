@@ -39,7 +39,7 @@ kubectl get all
 - See detailed pod information:
 
 ```bash
-kubectl describe pod <pod-name>
+kubectl describe <pod-name>
 ```
 - View logs (single container):
 
@@ -57,6 +57,27 @@ kubectl logs -f <pod-name>
 kubectl exec -it <pod-name> -- /bin/sh
 ```
 
+Scaling out a deployment
+- Scale up to 5 replicas:
+
+```bash
+kubectl scale deployment/<deployment-name> --replicas=5 -n default
+```
+- Check the new pods:
+
+```bash
+kubectl get pods
+```
+
+Pod resource usage
+- `kubectl top pods` shows CPU and memory usage for pods.
+- The command is `top`.
+- If you see `Metrics API not available`, install Metrics Server first.
+
+```bash
+kubectl top pods -n default
+```
+
 Describe a Service
 
 - Get service name(s):
@@ -67,7 +88,7 @@ kubectl get svc
 - Describe a service to see endpoints, ports and selectors:
 
 ```bash
-kubectl describe service <service-name>
+kubectl describe <service-name>
 ```
 
 Working with Secrets
