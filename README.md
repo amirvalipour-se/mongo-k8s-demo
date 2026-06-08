@@ -2,6 +2,10 @@
 
 Educational Kubernetes example with MongoDB and a simple web app.
 
+## Study Notes
+
+- [Kubernetes basics](docs/kubernetes-basics.md): short notes with corrected concepts and key terms.
+
 ## What this repo has
 
 - `config-mongo.yaml`: ConfigMap for non-sensitive app config.
